@@ -1,10 +1,10 @@
 # EPS 3 Deploy Symfony Application on AWS AppRunner
 
-## Facts
+## Problems
 1. AppRunner build didn't support to modify webserver for rewrite URL.
 2. I don't want to learn another tech like `setup.sh` or `supervisord`.
 
-## Solution
+## Possible Solution
 Use Docker Image to deploy Symfony Application on AWS AppRunner.
 
 ### Pros
@@ -13,5 +13,5 @@ Use Docker Image to deploy Symfony Application on AWS AppRunner.
 3. Familiar with Docker. No need to learn another tech.
 
 ### Cons
-1. Need to pay for ECR. Image size 200Mb. Cost $0.10/GB/month.
-2. Build the image myself locally. Can be mitigated with AWS CodeBuild.
+1. Need to pay for ECR (Elastic Container Image). Image size 200Mb. Cost $0.10/GB/month.
+2. Need to build the image myself locally. Can be mitigated with AWS CodeBuild.
