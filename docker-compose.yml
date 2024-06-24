@@ -1,0 +1,24 @@
+services:
+  app:
+    build:
+        context: .
+        dockerfile: dev.Dockerfile
+    image: CodeWithBudi/eps-3-deploy-symfony-on-aws-apprunner-dev
+    environment:
+      APP_ENV: dev
+      PHP_IDE_CONFIG: "serverName=CodeWithBudi"
+    ports:
+      - "6101:80"
+    volumes:
+      - ./:/app:cached
+  db:
+    image: library/mysql:8.0
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "6100:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root_pass
+      - MYSQL_DATABASE=app
+volumes:
+  db_data: ~
