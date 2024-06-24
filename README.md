@@ -13,5 +13,5 @@ Use Docker Image to deploy Symfony Application on AWS AppRunner.
 3. Familiar with Docker. No need to learn another tech.
 
 ### Cons
-1. Need to pay for ECR (Elastic Container Image). Image size 200Mb. Cost $0.10/GB/month.
-2. Need to build the image myself locally. Can be mitigated with AWS CodeBuild.
+1. Pay for ECR (Elastic Container Image). Image size 200Mb. Cost $0.10/GB/month.
+2. Build the image myself locally. Can be mitigated with AWS CodeBuild.
